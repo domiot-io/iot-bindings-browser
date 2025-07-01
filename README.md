@@ -228,7 +228,7 @@ const myHomeBindings = new HTMLElementCollection();
 myHomeBindings.add('iot-iotext-washing-machine-binding', HTMLIoTIOTextWachingMachineBindingElement);
 
 // Initialize DOMIoT to use my custom bindings
-const domiot = DOMIoT([myHomeBindings, homeBindings, retailElements]);
+DOMIoT([myHomeBindings, homeBindings, retailElements]);
 ```
 
 ## License
