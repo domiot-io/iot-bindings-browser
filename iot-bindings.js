@@ -409,12 +409,10 @@ class HTMLIoTOBitsColorBindingElement extends HTMLElement {
                     values.set(elementFirstChannelPos + i, '0');
                 }
 
-                if (typeof colorChannel === 'undefined' || colorChannel >= this._channelsPerElement) {
-                    unlock();
-                    return;
-                }
 
-                values.set(elementFirstChannelPos + colorChannel, '1');
+                if (typeof colorChannel !== 'undefined' && colorChannel < this._channelsPerElement) {
+                    values.set(elementFirstChannelPos + colorChannel, '1');
+                }
                 
                 let isSame = true;
 
